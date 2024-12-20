@@ -1,0 +1,12 @@
+<div class="sticky-bar">
+    <div class="card">
+        <p-menubar [model]="items">
+            <ng-template #item let-item>
+                <a [routerLink]="[]" [fragment]="item.fragment" class="p-menubar-item-link">
+                    <span [class]="item.icon"></span>
+                    <span class="ml-2">{{ item.label }}</span>
+                </a>
+            </ng-template>
+        </p-menubar>
+    </div>
+  </div>

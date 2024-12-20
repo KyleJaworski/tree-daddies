@@ -1,0 +1,24 @@
+
+
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #f5f5f5; /* Optional: Background for contrast */
+    position: relative;
+  }
+  
+  .main-container {
+    height: 100%; /* Full height of the screen */
+    width: 100%;
+    background-color: #ffffff; /* Container background */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border-radius: 8px; /* Optional: Rounded corners */
+    position: absolute;
+    top: 50%; /* Move to the vertical center */
+    left: 50%; /* Move to the horizontal center */
+    transform: translate(-50%, -50%); /* Offset by half the width and height */
+    display: flex; /* Align items horizontally */
+    flex-direction: column; /* Stack items vertically */
+  }
+  
