@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { HeroImageContainerComponent } from '../hero-image-container/hero-image-container.component';
+
 
 @Component({
   selector: 'app-header',
-  imports: [HeroImageContainerComponent],
+  imports: [],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
