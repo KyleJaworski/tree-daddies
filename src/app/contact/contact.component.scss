@@ -1,26 +1,19 @@
+@use '@angular/material' as mat;
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
-.slogan-container {
-    margin-top: 80px; /* 5% of the viewport height */
-    text-align: center; /* Optional: Center aligns the slogan horizontally */
 
+
+// Customize the entire app. Change :root to your selector if you want to scope the styles.
+button {
+  @include mat.button-overrides((
+    filled-container-color: orange,
+    filled-label-text-color: red,
+  ));
 }
 
-.slogan {
-    padding: 50px; /* Adds padding inside the slogan element */
-    font-size: 5em; /* Increases the font size */
-    letter-spacing: 4px; /* Adds spacing between the letters */
-    background-color: #f8f9fa; /* Optional: Adds a background color for better visibility */
-    font-family: "Abril Fatface", serif;
-  font-weight: 400;
-  font-style: normal;
-  color:#0e802a;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow effect */
-}
-
-.about-container {
+.contact-container {
     background-color: #f8f9fa;;
-    background: linear-gradient(135deg, #0e802a, #043f13); /* Gradient effect */
+    background: linear-gradient(135deg, #043f13, #0e802a); /* Gradient effect */
     color: white;
     display: flex;
     justify-content: center; /* Center the content horizontally */
@@ -30,8 +23,8 @@
 
 }
 .circular-image {
-    width: 400px; /* Set the width explicitly */
-    height: 400px; /* Ensure the height matches the width */
+    width: 500px; /* Set the width explicitly */
+    height: 500px; /* Ensure the height matches the width */
     border-radius: 50%; /* Makes the image circular */
     object-fit: cover; /* Ensures the image scales proportionally */
     overflow: hidden; /* Clips the image if needed */
@@ -56,6 +49,7 @@
 }
 
 .section-title {
+    margin-top: 20px;
     font-family: "Abril Fatface", serif;
     color: white;
     font-size: 4rem; /* Adjust font size as needed */
@@ -63,3 +57,16 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow effect */
     justify-self: center;
 }
+
+.button-row {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 10px; /* Add a small gap between the buttons */
+    margin: 40px; /* Optional: Add some space above the row */
+  }
+  
+  .button-container {
+    display: flex; /* Ensures the containers behave as flex items */
+    align-items: center; /* Aligns button content vertically */
+  }
+  
