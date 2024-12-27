@@ -1,0 +1,160 @@
+<form [formGroup]="bookingForm">
+  <mat-stepper orientation="vertical" linear="true" #stepper>
+    <mat-step [stepControl]="bookingForm.get('user')!" [editable]="isEditable">
+      <ng-template matStepLabel>Contact Info</ng-template>
+      <div
+        class="input-container"
+        [formGroup]="getFormGroup(bookingForm, 'user')"
+      >
+        <p-floatlabel variant="in">
+          <input
+            pInputText
+            id="name"
+            formControlName="name"
+            autocomplete="off"
+          />
+          <label for="name">Name</label>
+        </p-floatlabel>
+        <p-floatlabel variant="in">
+          <input
+            pInputText
+            id="email"
+            formControlName="email"
+            autocomplete="off"
+          />
+          <label for="email">Email</label>
+        </p-floatlabel>
+        <p-floatlabel variant="in">
+          <input
+            pInputText
+            id="address"
+            formControlName="address"
+            autocomplete="off"
+          />
+          <label for="address">Address</label>
+        </p-floatlabel>
+        <p-floatlabel variant="in">
+          <p-inputmask
+            id="phone"
+            mask="(999) 999-9999"
+            formControlName="phone"
+          />
+          <label for="phone">Phone</label>
+        </p-floatlabel>
+      </div>
+      <div>
+        <button mat-button matStepperNext type="button">Next</button>
+      </div>
+    </mat-step>
+    <mat-step
+      [editable]="isEditable"
+      [stepControl]="bookingForm.get('services')!"
+    >
+      <ng-template matStepLabel>Services</ng-template>
+
+      <div
+        class="multiselect-container input-container"
+        [formGroup]="getFormGroup(bookingForm, 'services')"
+      >
+        <p-floatlabel class="w-full md:w-80" variant="in">
+          <p-multiselect
+            id="services"
+            [options]="services"
+            [appendTo]="'body'"
+            formControlName="services"
+            optionLabel="name"
+            [maxSelectedLabels]="5"
+            styleClass="w-full md:w-80"
+          />
+          <label for="services">Services</label>
+        </p-floatlabel>
+      </div>
+
+      <div>
+        <button mat-button matStepperPrevious type="button">Back</button>
+        <button mat-button matStepperNext type="button">Next</button>
+      </div>
+    </mat-step>
+    <mat-step
+      [editable]="isEditable"
+      [stepControl]="bookingForm.get('dateTime')!"
+    >
+      <ng-template matStepLabel>Date/Time</ng-template>
+
+      <div
+        class="date-container"
+        [formGroup]="getFormGroup(bookingForm, 'date')"
+      >
+        <p-floatlabel variant="in">
+          <p-datepicker
+            id="dateTime"
+            formControlName="date"
+            [appendTo]="'body'"
+            inputId="Date"
+            showIcon
+            iconDisplay="input"
+            [showTime]="true"
+            hourFormat="12"
+          />
+          <label for="dateTime">Date/Time</label>
+        </p-floatlabel>
+      </div>
+
+      <div>
+        <button mat-button matStepperPrevious type="button">Back</button>
+        <button mat-button matStepperNext type="button" (click)="onReview()">
+          Next
+        </button>
+      </div>
+    </mat-step>
+    <mat-step [editable]="isEditable">
+      <ng-template matStepLabel>Review</ng-template>
+      <div class="input-container">
+        <p-floatlabel variant="in">
+          <input id="name" pInputText [value]="formData.name" readonly />
+          <label for="name">Name</label>
+        </p-floatlabel>
+        <p-floatlabel variant="in">
+          <input pInputText [value]="formData.email" readonly />
+          <label for="email">Email</label>
+        </p-floatlabel>
+
+        <p-floatlabel variant="in">
+          <input pInputText [value]="formData.address" readonly />
+          <label for="address">Address</label>
+        </p-floatlabel>
+
+        <p-floatlabel variant="in">
+          <input id="phone" pInputText [value]="formData.phone" readonly />
+          <label for="phone">Phone</label>
+        </p-floatlabel>
+
+        <p-floatLabel variant="in">
+          <input
+            id="services"
+            pInputText
+            [value]="servicesDisplayValue"
+            readonly
+          />
+          <label for="services">Services</label>
+        </p-floatLabel>
+
+        <p-floatlabel variant="in">
+          <input id="dateTime" pInputText [value]="formData.date" readonly />
+          <label for="dateTime">Date/Time</label>
+        </p-floatlabel>
+      </div>
+      <div>
+        <button mat-button matStepperPrevious type="button">Back</button>
+        <button mat-button matStepperNext type="button">Next</button>
+      </div>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Submitted</ng-template>
+      <div class="control-buttons">
+        <button mat-button (click)="onSubmit()">Submit</button>
+        <button mat-button (click)="closeDialog()">close</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+</form>

@@ -1,72 +1,86 @@
-@use '@angular/material' as mat;
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-
-
+@use "@angular/material" as mat;
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 
 // Customize the entire app. Change :root to your selector if you want to scope the styles.
 button {
-  @include mat.button-overrides((
-    filled-container-color: orange,
-    filled-label-text-color: red,
-  ));
+  @include mat.button-overrides(
+    (
+      filled-container-color: orange,
+      filled-label-text-color: red,
+    )
+  );
 }
 
 .contact-container {
-    background-color: #f8f9fa;;
-    background: linear-gradient(135deg, #043f13, #0e802a); /* Gradient effect */
-    color: white;
-    display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-    gap: 5px; /* Add space between the image and text */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.1); /* Add shadow effect */
-
+  background-color: #f8f9fa;
+  background: linear-gradient(135deg, #043f13, #0e802a); /* Gradient effect */
+  color: white;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  gap: 5px; /* Add space between the image and text */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.1); /* Add shadow effect */
 }
 .circular-image {
-    width: 500px; /* Set the width explicitly */
-    height: 500px; /* Ensure the height matches the width */
-    border-radius: 50%; /* Makes the image circular */
-    object-fit: cover; /* Ensures the image scales proportionally */
-    overflow: hidden; /* Clips the image if needed */
-    display: block; /* Optional: Removes inline spacing */
-    padding: 20px 20px; /* Adds margin around the image */
-    margin: 10px 0px; /* Adds space above and below the image */
-    margin-left: 60px;
-  }
+  width: 500px; /* Set the width explicitly */
+  height: 500px; /* Ensure the height matches the width */
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image scales proportionally */
+  overflow: hidden; /* Clips the image if needed */
+  display: block; /* Optional: Removes inline spacing */
+  padding: 20px 20px; /* Adds margin around the image */
+  margin: 10px 0px; /* Adds space above and below the image */
+  margin-left: 60px;
+}
 
-  .image_container{
-    width: 100%;
-    height: 100%;
-    margin-left: 40px; 
-  }
+.image_container {
+  width: 100%;
+  height: 100%;
+  margin-left: 40px;
+}
 
-  .description-container {
-    max-width: 900px; /* Optional: Set a max-width for better readability */
-    margin-left: auto;
-    margin-right: auto;
-    text-align: justify; /* Align text for a cleaner look */
-    line-height: 1.6; /* Adjust line height for readability */
+.description-container {
+  max-width: 900px; /* Optional: Set a max-width for better readability */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify; /* Align text for a cleaner look */
+  line-height: 1.6; /* Adjust line height for readability */
 }
 
 .section-title {
-    margin-top: 20px;
-    font-family: "Abril Fatface", serif;
-    color: white;
-    font-size: 4rem; /* Adjust font size as needed */
-    outline: black;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow effect */
-    justify-self: center;
+  margin-top: 20px;
+  font-family: "Abril Fatface", serif;
+  color: white;
+  font-size: 4rem; /* Adjust font size as needed */
+  outline: black;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow effect */
+  justify-self: center;
 }
 
 .button-row {
-    display: flex;
-    justify-content: center; /* Center the buttons horizontally */
-    gap: 10px; /* Add a small gap between the buttons */
-    margin: 40px; /* Optional: Add some space above the row */
-  }
-  
-  .button-container {
-    display: flex; /* Ensures the containers behave as flex items */
-    align-items: center; /* Aligns button content vertically */
-  }
-  
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  gap: 40px; /* Add a small gap between the buttons */
+  margin: 40px; /* Optional: Add some space above the row */
+}
+
+.button-container {
+  display: flex; /* Ensures the containers behave as flex items */
+  align-items: center; /* Aligns button content vertically */
+}
+
+.custom-button {
+  background-color: #966919 !important; /* Button background */
+  color: rgb(255, 255, 255) !important; /* Text color */
+}
+
+.custom-button:hover {
+  background-color: #ffbd33 !important; /* Darker on hover */
+}
+
+.input-container {
+  display: flex; /* Enable flexbox */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  padding-bottom: 20px;
+  gap: 20px; /* Space between input fields */
+}

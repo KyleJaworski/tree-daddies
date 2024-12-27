@@ -4,18 +4,22 @@
 @use '@angular/material' as mat;
 
 html {
+  color-scheme: light dark;
   @include mat.theme((
-    color: (
-      theme-type: light,
-      primary: mat.$spring-green-palette,
-      tertiary: mat.$blue-palette,
-    ),
-    typography: Roboto,
-    density: 0,
+    color: mat.$violet-palette,
+    typography: Roboto, // Use Material's typography configuration
+    density: 0
+  ) );
+}
+ //You can add global styles to this file, and also import other style files */
+
+
+ button {
+  @include mat.button-overrides((
+    filled-container-color: orange,
+    filled-label-text-color: red,
   ));
-
-}/* You can add global styles to this file, and also import other style files */
-
+ }
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
