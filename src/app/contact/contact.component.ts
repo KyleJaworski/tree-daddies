@@ -1,5 +1,4 @@
 import { MatIconModule } from '@angular/material/icon';
-
 import { Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
@@ -9,7 +8,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { MatDialog } from '@angular/material/dialog';
 import { MultiSelectModule } from 'primeng/multiselect';
-import { Dialog } from 'primeng/dialog';
 import { BookingSectionComponent } from '../booking-section/booking-section.component';
 
 @Component({
