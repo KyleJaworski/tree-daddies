@@ -2,6 +2,7 @@
   "name": "tree-daddies",
   "version": "0.0.0",
   "scripts": {
+    "build:github": "ng build --output-path docs --base-href /tree-daddies/ && xcopy /E /I docs\\browser\\* docs\\ && rmdir /S /Q docs\\browser docs\\server",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",

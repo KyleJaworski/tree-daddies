@@ -85,7 +85,9 @@
               }
             ],
             "styles": ["src/styles.scss"],
-            "scripts": []
+            "scripts": {
+              "build:github": "ng build --output-path docs --base-href /<repository-name>/ && cp -r docs/browser/* docs/ && rm -rf docs/browser docs/server"
+            }
           }
         }
       }
