@@ -34,14 +34,15 @@ button {
 
 .button-row {
   display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap to the next line */
   justify-content: center; /* Center the buttons horizontally */
-  gap: 40px; /* Add a small gap between the buttons */
-  margin: 40px; /* Optional: Add some space above the row */
+  margin: 40px 0px; /* Optional: Add some space above the row */
+  gap: 10px; /* Add space between the buttons */
 }
 
 .button-container {
   display: flex; /* Ensures the containers behave as flex items */
-  align-items: center; /* Aligns button content vertically */
+  justify-content: center; /* Aligns button content vertically */
 }
 
 .custom-button {
@@ -55,4 +56,14 @@ button {
 
 p {
   padding: 20px; /* Add padding around the text */
+}
+
+@media (min-width: 768px) {
+  .button-container {
+    flex: 1 1 auto; /* Buttons stretch naturally on larger screens */
+  }
+
+  .button-row {
+    flex-wrap: nowrap; /* Single row for larger screens */
+  }
 }

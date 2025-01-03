@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 
-.slogan-container {
-  margin-top: 80px; /* 5% of the viewport height */
-  text-align: center; /* Optional: Center aligns the slogan horizontally */
-}
-
 .slogan {
   padding: 50px; /* Adds padding inside the slogan element */
   font-size: 5em; /* Increases the font size */
@@ -15,6 +10,7 @@
   font-style: normal;
   color: #0e802a;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow effect */
+  text-align: center;
 }
 
 .about-container {
