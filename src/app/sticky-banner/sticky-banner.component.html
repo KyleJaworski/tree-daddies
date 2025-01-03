@@ -1,12 +1,19 @@
 <div class="sticky-bar">
-    <div class="card">
-        <p-menubar [model]="items">
-            <ng-template #item let-item>
-                <a [routerLink]="[]" [fragment]="item.fragment" class="p-menubar-item-link">
-                    <span [class]="item.icon"></span>
-                    <span class="ml-2">{{ item.label }}</span>
-                </a>
-            </ng-template>
-        </p-menubar>
-    </div>
-  </div>
+  <p-menubar class="desktop-only" [model]="deskTopItems"></p-menubar>
+  <button
+    class="mobile-only"
+    mat-icon-button
+    [matMenuTriggerFor]="menu"
+    aria-label="Example icon-button with a menu"
+  >
+    <mat-icon>more_vert</mat-icon>
+  </button>
+
+  <!-- Dropdown menu -->
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item *ngFor="let item of mobileItems">
+      <mat-icon>{{ item.icon }}</mat-icon>
+      <span>{{ item.label }}</span>
+    </button>
+  </mat-menu>
+</div>
