@@ -29,6 +29,10 @@
   flex-wrap: wrap; /* Ensure items wrap to the next line on smaller screens */
 }
 
+p {
+  color: black;
+}
+
 p-card {
   --p-card-background: #ffffff; /* Set a custom background color */
   --p-card-text-color: #333333; /* Set a custom text color */
