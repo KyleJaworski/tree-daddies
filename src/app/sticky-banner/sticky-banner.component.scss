@@ -1,3 +1,12 @@
+.custom-menu .mat-menu-panel {
+  background-color: #f70909 !important;
+  color: #000000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-menu .mat-menu-item {
+  color: #000000 !important;
+}
 .sticky-bar {
   padding: 5px; /* Add padding around the sticky bar */
   position: fixed; /* Makes the bar sticky */
@@ -22,6 +31,10 @@
   padding: 5px; /* Optional: Add padding around dropdown items */
   overflow: visible; /* Ensure items are not clipped */
   border-radius: 4px; /* Optional: Add rounded corners */
+}
+
+mat-menu {
+  --mat-sys-surface-container: #d61212; /* Set the background color */
 }
 
 .p-menubar .p-menuitem-link {

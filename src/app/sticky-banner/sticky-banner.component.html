@@ -10,7 +10,7 @@
   </button>
 
   <!-- Dropdown menu -->
-  <mat-menu #menu="matMenu">
+  <mat-menu #menu="matMenu" class="custom-menu">
     <button mat-menu-item *ngFor="let item of mobileItems">
       <mat-icon>{{ item.icon }}</mat-icon>
       <span>{{ item.label }}</span>
