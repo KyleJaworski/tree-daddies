@@ -1,65 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 
 .slogan-container {
-    margin-top: 80px; /* 5% of the viewport height */
-    text-align: center; /* Optional: Center aligns the slogan horizontally */
-
+  margin-top: 80px; /* 5% of the viewport height */
+  text-align: center; /* Optional: Center aligns the slogan horizontally */
 }
 
 .slogan {
-    padding: 50px; /* Adds padding inside the slogan element */
-    font-size: 5em; /* Increases the font size */
-    letter-spacing: 4px; /* Adds spacing between the letters */
-    background-color: #f8f9fa; /* Optional: Adds a background color for better visibility */
-    font-family: "Abril Fatface", serif;
+  padding: 50px; /* Adds padding inside the slogan element */
+  font-size: 5em; /* Increases the font size */
+  letter-spacing: 4px; /* Adds spacing between the letters */
+  background-color: #f8f9fa; /* Optional: Adds a background color for better visibility */
+  font-family: "Abril Fatface", serif;
   font-weight: 400;
   font-style: normal;
-  color:#0e802a;
+  color: #0e802a;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow effect */
 }
 
 .about-container {
-    background-color: #f8f9fa;;
-    background: linear-gradient(135deg, #0e802a, #043f13); /* Gradient effect */
-    color: white;
-    display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-    gap: 5px; /* Add space between the image and text */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.1); /* Add shadow effect */
-
+  background-color: #f8f9fa;
+  background: linear-gradient(135deg, #0e802a, #043f13); /* Gradient effect */
+  color: white;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  gap: 5px; /* Add space between the image and text */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.1); /* Add shadow effect */
 }
 .circular-image {
-    width: 400px; /* Set the width explicitly */
-    height: 400px; /* Ensure the height matches the width */
-    border-radius: 50%; /* Makes the image circular */
-    object-fit: cover; /* Ensures the image scales proportionally */
-    overflow: hidden; /* Clips the image if needed */
-    display: block; /* Optional: Removes inline spacing */
-    padding: 20px 20px; /* Adds margin around the image */
-    margin: 10px 0px; /* Adds space above and below the image */
-    margin-left: 60px;
-  }
+  width: 400px; /* Set the width explicitly */
+  height: 400px; /* Ensure the height matches the width */
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image scales proportionally */
+  overflow: hidden; /* Clips the image if needed */
+  display: block; /* Optional: Removes inline spacing */
+  padding: 20px 20px; /* Adds margin around the image */
+  margin: 10px 0px; /* Adds space above and below the image */
+}
 
-  .image_container{
-    width: 100%;
-    height: 100%;
-    margin-left: 40px; 
-  }
+.image_container {
+  width: 100%;
+  height: 100%;
+}
 
-  .description-container {
-    max-width: 900px; /* Optional: Set a max-width for better readability */
-    margin-left: auto;
-    margin-right: auto;
-    text-align: justify; /* Align text for a cleaner look */
-    line-height: 1.6; /* Adjust line height for readability */
+.description-container {
+  max-width: 900px; /* Optional: Set a max-width for better readability */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify; /* Align text for a cleaner look */
+  line-height: 1.6; /* Adjust line height for readability */
+  padding: 20px; /* Add padding around the text */
 }
 
 .section-title {
-    font-family: "Abril Fatface", serif;
-    color: white;
-    font-size: 4rem; /* Adjust font size as needed */
-    outline: black;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow effect */
-    justify-self: center;
+  font-family: "Abril Fatface", serif;
+  color: white;
+  font-size: 4rem; /* Adjust font size as needed */
+  outline: black;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow effect */
+  justify-self: center;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column; /* Stack the items vertically when the screen width is <= 768px */
+    align-items: center;
+  }
+
+  .image-container {
+    order: -1; /* Move the image to the top */
+  }
+
+  .description-container {
+    order: 1; /* Ensure the description stays at the bottom */
+  }
 }
