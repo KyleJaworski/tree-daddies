@@ -31,6 +31,7 @@
 
 p-card {
   --p-card-background: #ffffff; /* Set a custom background color */
+  --p-card-text-color: #333333; /* Set a custom text color */
   width: 300px; /* Set consistent width for all cards */
   display: flex;
   flex-direction: column; /* Stack items vertically */
