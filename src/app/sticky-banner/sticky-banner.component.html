@@ -1,11 +1,24 @@
-<div class="sticky-bar">
+<div class="sticky-bar" *ngIf="!isMobile">
   <p-menubar class="desktop-only" [model]="deskTopItems"></p-menubar>
   <button
-    class="mobile-only"
+    class="desktop-small-window"
     mat-icon-button
     [matMenuTriggerFor]="menu"
-    aria-label="Example icon-button with a menu"
   >
+    <mat-icon>more_vert</mat-icon>
+  </button>
+
+  <!-- Dropdown menu -->
+  <mat-menu #menu="matMenu" class="custom-menu">
+    <button mat-menu-item *ngFor="let item of mobileItems">
+      <mat-icon>{{ item.icon }}</mat-icon>
+      <span>{{ item.label }}</span>
+    </button>
+  </mat-menu>
+</div>
+
+<div class="sticky-bar" *ngIf="isMobile">
+  <button mat-icon-button [matMenuTriggerFor]="menu">
     <mat-icon>more_vert</mat-icon>
   </button>
 

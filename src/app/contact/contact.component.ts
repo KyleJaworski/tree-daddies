@@ -9,6 +9,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { MatDialog } from '@angular/material/dialog';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { BookingSectionComponent } from '../booking-section/booking-section.component';
+import { DeviceDetectorService } from 'ngx-device-detector';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact',
@@ -22,12 +24,19 @@ import { BookingSectionComponent } from '../booking-section/booking-section.comp
     MatInputModule,
     InputTextModule,
     MultiSelectModule,
+    CommonModule,
   ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
-  constructor(private dialog: MatDialog) {}
+  isMobile: boolean = false;
+  constructor(
+    private dialog: MatDialog,
+    private deviceService: DeviceDetectorService
+  ) {
+    this.isMobile = this.deviceService.isMobile();
+  }
 
   makeCall(): void {
     window.location.href = 'tel:+17656050530';

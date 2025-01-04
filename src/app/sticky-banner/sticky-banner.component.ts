@@ -5,7 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
-
+import { DeviceDetectorService } from 'ngx-device-detector';
 import { RouterModule } from '@angular/router'; // Import RouterModule
 
 @Component({
@@ -37,4 +37,9 @@ export class StickyBannerComponent {
     { label: 'Book', icon: 'event_upcoming', routerLink: '' },
     { label: 'FAQ', icon: 'help', routerLink: '' },
   ];
+
+  isMobile: boolean = false;
+  constructor(private deviceService: DeviceDetectorService) {
+    this.isMobile = this.deviceService.isMobile();
+  }
 }

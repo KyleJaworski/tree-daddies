@@ -20,7 +20,7 @@
   justify-self: center;
 }
 
-.button-row {
+.mobile-button-display {
   display: flex;
   flex-wrap: wrap; /* Allow buttons to wrap to the next line */
   justify-content: center; /* Center the buttons horizontally */
@@ -29,12 +29,21 @@
   gap: 10px; /* Add space between the buttons */
   width: fit-content; /* Adjust width to fit the content */
 }
+.phone-email {
+  display: flex;
+  flex-direction: column; /* Phone and email stacked vertically */
+  gap: 10px; /* Space between phone and email items */
+}
 
-.button-container {
-  flex: 1 1 calc(50% - 10px); /* Buttons take 50% width minus the gap */
-  display: flex; /* Ensure the buttons behave as flex items */
-  justify-content: center; /* Center the button content */
-  max-width: 50%; /* Ensure each button container does not exceed half the row width */
+.desktop-contact-display {
+  display: flex;
+
+  align-items: center; /* Aligns items vertically */
+  gap: 20px; /* Adds spacing between phone-email and book-button */
+  padding-bottom: 20px; /* Center the row within the parent horizontally */
+}
+div.contact-link {
+  padding-bottom: 5px;
 }
 
 .custom-button {

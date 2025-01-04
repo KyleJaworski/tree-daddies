@@ -45,7 +45,7 @@ mat-menu {
   display: none;
 }
 
-.mobile-only {
+.desktop-small-window {
   display: none;
 }
 /* Hide the hamburger button */
@@ -74,7 +74,7 @@ mat-menu {
 
 /* Show mobile menu for screens narrower than 768px */
 @media (max-width: 999px) {
-  .mobile-only {
+  .desktop-small-window {
     display: block;
   }
 }
